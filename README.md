@@ -9,7 +9,7 @@ We provide a simple installation script that, by default, sets up a conda enviro
 source install.sh
 ```
 
-<span style="color:blue">If you are using macbook, then use the instruction below to install Pytorch(other steps are same):</span>
+<font color=blue>If you are using macbook, then use the instruction below to install Pytorch(other steps are same):</font>
 
 ```
 pip install torch torchvision torchaudio
@@ -39,6 +39,6 @@ python demo1.py
 
 **To see the result of counting humans:**
 ```.bash
-python demo2.py
+python demo3.py
 ```
-<span style="color:blue">P.S. The program will save the counting results of every frame in the video as .txt file in `/runs/detect/`.</span>
+<font color=blue>P.S. The program will save the counting results of every frame in the video as .txt file in `/runs/detect/`.</font>
