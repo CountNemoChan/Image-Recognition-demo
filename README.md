@@ -9,7 +9,7 @@ We provide a simple installation script that, by default, sets up a conda enviro
 source install.sh
 ```
 
-<span style="color:blue">If you are using macbook, then using the instruction below to install Pytorch(other steps are same):</span>
+<span style="color:blue">If you are using macbook, then use the instruction below to install Pytorch(other steps are same):</span>
 
 ```
 pip install torch torchvision torchaudio
