@@ -2,6 +2,7 @@
 
 from ultralytics.models import YOLO,RTDETR
 import numpy as np
+import pandas as pd 
 
 from model.calculate_density import Cal_density
 
@@ -10,9 +11,15 @@ area_square = 80 # default unit is square meter
 
 
 # 初始化模型
-model = YOLO("yolov8x.pt") 
+model = YOLO("/Users/ouyanggu/Desktop/abb_internship_project/yolov8x.pt") 
 # model = RTDETR(weights_path) # weights_path为指向训练好的权重文件的路径
- 
+
+# Erase all history data
+file_path = 'demo3_output.csv'
+
+with open(file_path, 'w') as file:
+    pass
+
 # 调用track方法进行追踪
 results = model.track(
     source="street.mp4", # 待处理视频的地址，如果是webcam实时录制处理，则source=0
@@ -33,7 +40,7 @@ results = model.track(
 # 对每一帧返回的结果进行处理
 for r in results:
     boxes = r.boxes  # Boxes object for bbox outputs
-
+    n=1
     # The parameters below have no contribution to the specific project
 
     # masks = r.masks  # Masks object for segment masks outputs
@@ -43,6 +50,10 @@ for r in results:
     num = np.sum(class_ids == 0)
     print(num)
 
-    # Calculate density of people
+    # Calculate density of people(record the data only when density is not zero)
     cal_density = Cal_density(num,area_square)
-    print(cal_density.method1())
+    if ((cal_density.method1()) and n==1) :
+        df = pd.DataFrame({'Value':[cal_density.method1()]})
+        df.to_csv('demo3_output.csv', index=False, mode='a', header=False)
+        print(cal_density.method1())
+        n = n - 1
