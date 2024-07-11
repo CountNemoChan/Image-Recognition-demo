@@ -36,11 +36,13 @@ results = model.track(
     iou=0.5, # 交并比阈值，用于去除同一目标的冗余框
     device="mps", # 用GPU进行推理，如果使用cpu，则为device="cpu" # Here we use macbook, so device is "mps"
 )
- 
+    
+temp = 0   # Store the result of last epoch
+
 # 对每一帧返回的结果进行处理
 for r in results:
     boxes = r.boxes  # Boxes object for bbox outputs
-    n=1
+    n = 1 
     # The parameters below have no contribution to the specific project
 
     # masks = r.masks  # Masks object for segment masks outputs
@@ -50,10 +52,12 @@ for r in results:
     num = np.sum(class_ids == 0)
     print(num)
 
-    # Calculate density of people(record the data only when density is not zero)
+    # Calculate density of people(record the data only when density has changed)
     cal_density = Cal_density(num,area_square)
-    if ((cal_density.method1()) and n==1) :
+    if (n ==1  and temp != cal_density.method1()) :
         df = pd.DataFrame({'Value':[cal_density.method1()]})
         df.to_csv('demo3_output.csv', index=False, mode='a', header=False)
         print(cal_density.method1())
         n = n - 1
+
+    temp = cal_density.method1()
