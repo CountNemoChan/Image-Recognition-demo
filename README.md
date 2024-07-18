@@ -1,6 +1,7 @@
 # ABB-project
 
-## Image Recognition - focus on the density of staff in a particular area
+## Image Recognition - focus on the density of staff in a particular area and how to connect with different databases
+
 
 ### Installation
 We provide a simple installation script that, by default, sets up a conda environment with Python 3.9, Pytorch 2.3， and CUDA 12.1 (the CUDA version of ABB-PC with Geforce RTX 4060Ti)
