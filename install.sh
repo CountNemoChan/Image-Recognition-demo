@@ -16,3 +16,6 @@ conda install pytorch==2.3.0 torchvision==0.18.0 torchaudio==2.3.0 pytorch-cuda=
 
 # Install ultralytics for pretrained yolov8 model
 pip install ultralytics
+
+# Other packages to manage data
+pip install pandas sqlalchemy

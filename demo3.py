@@ -43,6 +43,7 @@ temp = 0   # Store the result of last epoch
 for r in results:
     boxes = r.boxes  # Boxes object for bbox outputs
     n = 1 
+    
     # The parameters below have no contribution to the specific project
 
     # masks = r.masks  # Masks object for segment masks outputs
