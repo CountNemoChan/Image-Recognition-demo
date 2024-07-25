@@ -1,0 +1,4 @@
+server: 'localhost'
+database: "ZEE600Data_Ins_SKDS"
+username: 'ZEE600'
+password: 'Aa123456'

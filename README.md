@@ -4,7 +4,7 @@
 
 
 ### Installation
-We provide a simple installation script that, by default, sets up a conda environment with Python 3.9, Pytorch 2.3， and CUDA 12.1 (the CUDA version of ABB-PC with Geforce RTX 4060Ti)
+We provide a simple installation script that, by default, sets up a conda environment with Python 3.9, Pytorch 2.3， and CUDA 12.1 (the CUDA version of ABB-PC, Geforce RTX 4060Ti)
 
 ```.bash
 source install.sh
