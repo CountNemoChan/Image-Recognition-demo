@@ -19,3 +19,5 @@ pip install ultralytics
 
 # Other packages to manage data
 pip install pandas sqlalchemy
+
+pip install pymssql

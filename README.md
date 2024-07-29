@@ -43,3 +43,24 @@ python demo1.py
 python demo3.py
 ```
 <font color=blue>P.S. The program will save the counting results of every frame in the video as .txt file in `/runs/detect/`.</font>
+
+#### 3. Insert data to database
+To insert data to database, the first step is to confirm the information of the database you want to access。
+
+Edit file: `config/database_config.yaml`
+
+![Alt text](image.png)
+
+When you set the right parameters of the database, you can now compile the script: `insert_data_to_database.py`
+
+Using instruction:
+```.bash
+python insert_data_to_database.py
+```
+#### 4. Adjust accelerator
+There are several parameters we need to modify when we plan to use different device. For `Windows` and `Linux` device: you can use `cuda` (if equip) or `cpu`; For `MacBook` device: using `mps`. The parameters are placed in the following scripts:
+
+[File 1](demo1.py#L5)
+[File 2](demo3.py#L34)
+[File 3](/model/counting_num_of_staff.py#L35)
+[File 3](/model/show_live_video.py#L6)

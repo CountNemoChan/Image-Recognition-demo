@@ -31,7 +31,7 @@ results = model.track(
     save_txt=True,
     conf=0.4,
     iou=0.5,
-    device="mps",
+    device="mps", # Generally, we use "cuda" to accelerate
 )
 
 temp = 0  # Store the result of last epoch
