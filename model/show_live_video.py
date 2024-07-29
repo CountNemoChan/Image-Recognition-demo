@@ -3,7 +3,7 @@ import cv2
 from ultralytics import YOLO, solutions
 
 def show_live_video():
-    model = YOLO("../yolov8x.pt").to("mps") # Generally, we use "cuda" to accelerate
+    model = YOLO("yolov8x.pt").to("mps") # Generally, we use "cuda" to accelerate
     cap = cv2.VideoCapture("street.mp4")
     assert cap.isOpened(), "Error reading video file"
     w, h, fps = (int(cap.get(x)) for x in (cv2.CAP_PROP_FRAME_WIDTH, cv2.CAP_PROP_FRAME_HEIGHT, cv2.CAP_PROP_FPS))

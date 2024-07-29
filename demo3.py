@@ -6,10 +6,10 @@ from model.calculate_density import Cal_density
 from datetime import datetime
 
 # Initialize the environment parameters
-area_square = 80  # default unit is square meter
+area_square = 1  # default unit is square meter
 
 # Initialize model
-model = YOLO("/Users/ouyanggu/Desktop/abb_internship_project/yolov8x.pt")
+model = YOLO("../yolov8x.pt")
 
 # Define file path
 file_path = 'demo3_output.csv'

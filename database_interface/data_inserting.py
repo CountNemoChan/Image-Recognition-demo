@@ -31,7 +31,7 @@ def insert_data(server, database, username, password):
     # Insert data into the existing table
     for index, row in df.iterrows():
         insert_query = '''
-        INSERT INTO EnergyTuning (Time, num_of_staff) 
+        INSERT INTO Staff_Counting (Time, num_of_staff) 
         VALUES (%s, %s)
         '''
         cursor.execute(insert_query, (

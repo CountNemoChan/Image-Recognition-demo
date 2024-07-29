@@ -10,7 +10,7 @@ def counting_num_of_staff():
     area_square = 80  # default unit is square meter
 
     # Initialize model
-    model = YOLO("/Users/ouyanggu/Desktop/abb_internship_project/yolov8x.pt")
+    model = YOLO("yolov8x.pt")
 
     # Define file path
     file_path = 'demo3_output.csv'
