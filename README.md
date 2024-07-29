@@ -1,6 +1,6 @@
 # ABB-project
 
-## Image Recognition - focus on the density of staff in a particular area and how to connect with different databases
+## Image Recognition - focus on the density of staff in a particular area and how to connect with different databases -- July 2024
 
 
 ### Installation
