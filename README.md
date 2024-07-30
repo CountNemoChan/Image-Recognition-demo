@@ -32,16 +32,22 @@ You can download different versions of pretained-yolov8-model:
 
 We set the default model as `yolov8x`. If you want to change the pretrain-model into a new one, you only need to modify the following places:
 [demo1.py](demo1.py#L5)
+
 [demo3.py](demo3.py#L12)
+
 [counting_num_of_staff.py](model/counting_num_of_staff.py#L13)
+
 [show_live_video.py](model/show_live_video.py#L6)
 
 #### 2. Adjust accelerator
 There are several parameters we need to modify when we plan to use different device. For `Windows` and `Linux` device: you can use `cuda` (if equipped) or `cpu`; For `MacBook` device: using `mps`. The parameters are placed in the following scripts:
 
 [demo1.py](demo1.py#L5)
+
 [demo3.py](demo3.py#L36)
+
 [counting_num_of_staff.py](/model/counting_num_of_staff.py#L35)
+
 [show_live_video.py](/model/show_live_video.py#L6)
 
 #### 3. Set the source of vedio
@@ -49,6 +55,7 @@ There are several parameters we need to modify when we plan to use different dev
 You can choose your own input source. (Live video is supported)
 
 [Source in demo1.py](demo1.py#L6)
+
 [Source in demo3.py](demo3.py#L24)
 
 #### 4. Run the demo
