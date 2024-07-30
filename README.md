@@ -35,7 +35,23 @@ We set the default model as `yolov8x`. If you want to change the pretrain-model 
 [demo3.py](demo3.py#L12)
 [counting_num_of_staff.py](model/counting_num_of_staff.py#L13)
 [show_live_video.py](model/show_live_video.py#L6)
-#### 2. Run the demo
+
+#### 2. Adjust accelerator
+There are several parameters we need to modify when we plan to use different device. For `Windows` and `Linux` device: you can use `cuda` (if equipped) or `cpu`; For `MacBook` device: using `mps`. The parameters are placed in the following scripts:
+
+[demo1.py](demo1.py#L5)
+[demo3.py](demo3.py#L36)
+[counting_num_of_staff.py](/model/counting_num_of_staff.py#L35)
+[show_live_video.py](/model/show_live_video.py#L6)
+
+#### 3. Set the source of vedio
+
+You can choose your own input source. (Live video is supported)
+
+[Source in demo1.py](demo1.py#L6)
+[Source in demo3.py](demo3.py#L24)
+
+#### 4. Run the demo
 
 **To watch the live video:**
 ```.bash
@@ -51,7 +67,7 @@ The results will be saved as a CSV file `demo3_output.csv`, and the results repr
 
 <font color=blue>P.S. The program will save the number of the staff in every frame in the video as .txt file in `/runs/detect/`.</font>
 
-#### 3. Insert data to database
+#### 5. Insert data to database
 To insert data to database, the first step is to confirm the information of the database you want to access。
 
 Edit file: [database_config.yaml](config/database_config.yaml)
@@ -72,10 +88,3 @@ CREATE TABLE Staff_Counting(
     num_of_staff FLOAT
 )
 ```
-#### 4. Adjust accelerator
-There are several parameters we need to modify when we plan to use different device. For `Windows` and `Linux` device: you can use `cuda` (if equip) or `cpu`; For `MacBook` device: using `mps`. The parameters are placed in the following scripts:
-
-[demo1.py](demo1.py#L5)
-[demo3.py](demo3.py#L34)
-[counting_num_of_staff.py](/model/counting_num_of_staff.py#L35)
-[show_live_video.py](/model/show_live_video.py#L6)

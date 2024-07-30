@@ -3,7 +3,8 @@ import cv2
 from ultralytics import YOLO, solutions
 
 model = YOLO("yolov8x.pt").to("mps") # Generally, we use "cuda" to accelerate
-cap = cv2.VideoCapture("street.mp4")
+source = 'street.mp4'
+cap = cv2.VideoCapture(source)
 assert cap.isOpened(), "Error reading video file"
 w, h, fps = (int(cap.get(x)) for x in (cv2.CAP_PROP_FRAME_WIDTH, cv2.CAP_PROP_FRAME_HEIGHT, cv2.CAP_PROP_FPS))
 

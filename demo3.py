@@ -21,9 +21,11 @@ with open(file_path, 'w') as file:
 # Define column names
 column_names = ['Time', 'num_of_staff']
 
+source = 'street.mp4'
+
 # 调用track方法进行追踪
 results = model.track(
-    source="street.mp4",
+    source=source,
     stream=True,
     tracker="botsort.yaml",
     save_dir="counting_demo.mp4",
