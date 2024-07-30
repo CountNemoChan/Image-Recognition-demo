@@ -51,7 +51,7 @@ There are several parameters we need to modify when we plan to use different dev
 
 [show_live_video.py](/model/show_live_video.py#L6)
 
-#### 3. Set the source of vedio
+#### 3. Set the source of video
 
 You can choose your own input source. (Live video is supported)
 
