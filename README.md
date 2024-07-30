@@ -31,6 +31,7 @@ You can download different versions of pretained-yolov8-model:
 | [YOLOv8x](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8x-oiv7.pt) | 640                   | 36.3                 | 860.6                          | 3.56                                | 68.7               | 260.6             |
 
 We set the default model as `yolov8x`. If you want to change the pretrain-model into a new one, you only need to modify the following places:
+
 [demo1.py](demo1.py#L5)
 
 [demo3.py](demo3.py#L12)
